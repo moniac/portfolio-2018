@@ -1,0 +1,5 @@
+@import './components/_base/base.css';
+@import './components/_base/variables.css';
+@import './components/mainHeader/mainHeader.css';
+@import './components/logoContainer/logoContainer.css';
+@import './components/workGrid/workGrid.css';

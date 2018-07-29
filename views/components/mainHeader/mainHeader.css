@@ -1,0 +1,22 @@
+.main-header {
+	height: 70vh;
+	background-image: linear-gradient(-225deg, #010220 0%, #000000 100%);
+	clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
+	color: var(--main-text-color);
+
+	&__nav {
+		color: var(--main-text-color);
+		ul {
+			margin: 0;
+			padding: 0;
+
+			li {
+
+				a {
+					color: var(--main-text-color);
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}

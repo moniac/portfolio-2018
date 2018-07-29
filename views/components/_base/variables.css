@@ -1,0 +1,5 @@
+:root {
+	--main-text-color: #FFFFFF;
+}
+
+@custom-media --medium (min-width: 40rem);
