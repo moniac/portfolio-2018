@@ -1,10 +1,37 @@
 .workgrid {
 	font-size: 2rem;
 
-	figure {
+	&__intro {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		padding: 1rem 0rem;
+		position: relative;
+	}
 
+	&__underline {
+		display: inline-block;
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			content: '';
+			display: block;
+			width: 100%;
+			height: 0.2rem;
+			background-color: #3199d4;
+			transform-origin: 0% 50%;
+		}
+	}
+
+	figure {
+		display: block;
+		margin: 0;
 		img {
 			width: 100%;
+			display: block;
 		}
 	}
 
@@ -13,12 +40,19 @@
 		flex-direction: column;
 		margin: 0;
 		padding: 0;
+		@media (--medium) {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
 		li {
 			list-style: none;
-			flex: 1;
+			@media (--medium) {
+				padding: 0.4rem;
+				min-width: 50%;
+			}
 			a {
 				display: block;
-				background: blue;
+				background: #3199d4;
 			}
 		}
 	}

@@ -19,8 +19,14 @@ body {
 	-webkit-transform: translate(-50%,-50%);
 	    -ms-transform: translate(-50%,-50%);
 	        transform: translate(-50%,-50%);
-	-webkit-filter: blur(2px);
-	        filter: blur(2px);
+}
+
+.hexagon {
+	margin-right: 2rem;
+	-webkit-filter: blur(4px);
+	        filter: blur(4px);
+	display: inline-block;
+	animation: rotate 15s linear infinite alternate-reverse forwards;
 }
 
 .square {
@@ -30,22 +36,24 @@ body {
 	-webkit-transform: rotate(-45deg);
 	    -ms-transform: rotate(-45deg);
 	        transform: rotate(-45deg);
-	-webkit-animation-name: rotate;
-	        animation-name: rotate;
-	-webkit-animation-duration: 15s;
-	        animation-duration: 15s;
-	-webkit-animation-timing-function: linear;
-	        animation-timing-function: linear;
-	/* or: Xms */
-	-webkit-animation-iteration-count: infinite;
-	        animation-iteration-count: infinite;
-	-webkit-animation-direction: alternate;
-	        animation-direction: alternate;
-	/* or: normal */
-	/* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
-	-webkit-animation-fill-mode: forwards;
-	        animation-fill-mode: forwards;
+	-webkit-animation: rotate 15s linear infinite alternate forwards;
+	        animation: rotate 15s linear infinite alternate forwards;
+	-webkit-filter: blur(2px);
+	        filter: blur(2px);
+	margin-bottom: 4rem;
+	display: inline-block;
 }
+
+.triangle {
+	margin-right: 2rem;
+	display: inline-block;
+	margin-top: 4rem;
+}
+
+.triangle img {
+		height: 4.4rem;
+		display: inline-block;
+	}
 
 @-webkit-keyframes rotate {
 	from {
@@ -138,8 +146,47 @@ body {
 	font-size: 2rem;
 }
 
+.workgrid__intro {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+		-webkit-box-align: end;
+		    -ms-flex-align: end;
+		        align-items: flex-end;
+		padding: 1rem 0rem;
+		position: relative;
+	}
+
+.workgrid__underline {
+		display: inline-block;
+		position: relative;
+	}
+
+.workgrid__underline::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			content: '';
+			display: block;
+			width: 100%;
+			height: 0.2rem;
+			background-color: #3199d4;
+			-webkit-transform-origin: 0% 50%;
+			    -ms-transform-origin: 0% 50%;
+			        transform-origin: 0% 50%;
+		}
+
+.workgrid figure {
+		display: block;
+		margin: 0;
+	}
+
 .workgrid figure img {
 			width: 100%;
+			display: block;
 		}
 
 .workgrid__container {
@@ -156,14 +203,11 @@ body {
 
 .workgrid__container li {
 			list-style: none;
-			-webkit-box-flex: 1;
-			    -ms-flex: 1;
-			        flex: 1;
 		}
 
 .workgrid__container li a {
 				display: block;
-				background: blue;
+				background: #3199d4;
 			}
 
 @media (min-width: 40rem) {
@@ -178,5 +222,19 @@ body {
 
 .logoContainer aside h2 {
 				font-size: 1.125rem
+		}
+
+.workgrid__container {
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			    -ms-flex-direction: row;
+			        flex-direction: row;
+			-ms-flex-wrap: wrap;
+			    flex-wrap: wrap
+	}
+
+.workgrid__container li {
+				padding: 0.4rem;
+				min-width: 50%
 		}
 		}
